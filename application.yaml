@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mlops-manifestos
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/sarakpyny/manifesto-application-deployment.git
+    targetRevision: main
+    path: deployment
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: user-sny
+  syncPolicy:
+    automated:
+      selfHeal: true
