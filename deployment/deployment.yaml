@@ -22,7 +22,7 @@ spec:
             - name: URL_RAW
               value: "https://minio.lab.sspcloud.fr/sny/mlops-manifesto/processed/manifestos_raw.parquet"
             - name: MLFLOW_TRACKING_URI
-              value: "YOUR_MLFLOW_TRACKING_URI"
+              value: "sqlite:///mlflow.db"
             - name: MLFLOW_MODEL_NAME
               value: "manifesto_topic_model"
             - name: MLFLOW_MODEL_ALIAS
